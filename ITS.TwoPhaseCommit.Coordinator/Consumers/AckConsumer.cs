@@ -34,5 +34,9 @@ public class AckConsumer : IConsumer<Ack>
             context.Message.TransactionId,
             context.Message.Participant.ToString()
         );
+        
+        // If all services has successfully committed/aborted the transaction,
+        // remove it from the store
+        _transactionManager.Remove(context.Message.TransactionId);
     }
 }

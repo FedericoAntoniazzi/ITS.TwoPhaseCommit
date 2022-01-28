@@ -2,7 +2,7 @@ namespace ITS.TwoPhaseCommit.Contracts;
 
 public class Ack
 {
-    public Ack(ParticipantIdentity participant, Guid transactionId)
+    public Ack(Guid transactionId, ParticipantIdentity participant)
     {
         Participant = participant;
         TransactionId = transactionId;

@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.TwoPhaseCommit.Models",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.TwoPhaseCommit.Coordinator", "ITS.TwoPhaseCommit.Coordinator\ITS.TwoPhaseCommit.Coordinator.csproj", "{4CC7186C-2C74-4355-B65D-B51A08B84E60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.TwoPhaseCommit.CustomerService", "ITS.TwoPhaseCommit.CustomerService\ITS.TwoPhaseCommit.CustomerService.csproj", "{3C16BD08-5A9E-4DF4-B771-E7BCC9F1DBF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.TwoPhaseCommit.OrderService", "ITS.TwoPhaseCommit.OrderService\ITS.TwoPhaseCommit.OrderService.csproj", "{6E86ADC9-AED0-49AB-A6C6-41321C9A2E72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{4CC7186C-2C74-4355-B65D-B51A08B84E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CC7186C-2C74-4355-B65D-B51A08B84E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CC7186C-2C74-4355-B65D-B51A08B84E60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C16BD08-5A9E-4DF4-B771-E7BCC9F1DBF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C16BD08-5A9E-4DF4-B771-E7BCC9F1DBF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C16BD08-5A9E-4DF4-B771-E7BCC9F1DBF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C16BD08-5A9E-4DF4-B771-E7BCC9F1DBF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E86ADC9-AED0-49AB-A6C6-41321C9A2E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E86ADC9-AED0-49AB-A6C6-41321C9A2E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E86ADC9-AED0-49AB-A6C6-41321C9A2E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E86ADC9-AED0-49AB-A6C6-41321C9A2E72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

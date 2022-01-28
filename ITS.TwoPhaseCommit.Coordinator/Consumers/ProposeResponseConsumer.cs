@@ -20,7 +20,7 @@ public class ProposeResponseConsumer : IConsumer<ProposeResponse>
         _logger = logger;
     }
 
-    public Task Consume(ConsumeContext<ProposeResponse> context)
+    public async Task Consume(ConsumeContext<ProposeResponse> context)
     {
         // The service has locked all the resources and it's ready to commit
         if (context.Message.CanCommit)
@@ -37,9 +37,34 @@ public class ProposeResponseConsumer : IConsumer<ProposeResponse>
                 context.Message.TransactionId,
                 context.Message.Participant.ToString()
             );
-        }
 
-        return Task.CompletedTask;
-        // TODO: Otherwise abort
+            await context.Publish(
+                new Commit(
+                    context.Message.TransactionId
+                )
+            );
+        }
+        // Otherwise abort the transaction
+        else
+        {
+            _transactionManager.SetState(
+                context.Message.TransactionId,
+                new TransactionState(
+                    context.Message.Participant,
+                    ParticipantState.Abort
+                )
+            );
+            _logger.LogInformation(
+                "{}: {} ABORT",
+                context.Message.TransactionId,
+                context.Message.Participant.ToString()
+            );
+
+            await context.Publish(
+                new Abort(
+                    context.Message.TransactionId
+                )
+            );
+        }
     }
 }

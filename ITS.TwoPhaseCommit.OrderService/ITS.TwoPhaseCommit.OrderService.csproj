@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-ITS.TwoPhaseCommit.OrderService-ED39B4F1-33C9-4528-8D8B-81B946FF54FD</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MassTransit" Version="7.3.1" />
+        <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
+        <PackageReference Include="MassTransit.RabbitMQ" Version="7.3.1" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ITS.TwoPhaseCommit.Contracts\ITS.TwoPhaseCommit.Contracts.csproj" />
+      <ProjectReference Include="..\ITS.TwoPhaseCommit.Models\ITS.TwoPhaseCommit.Models.csproj" />
+    </ItemGroup>
+</Project>
